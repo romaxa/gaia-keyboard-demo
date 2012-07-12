@@ -317,7 +317,7 @@
     };
 
     this.click = function ime_click(keyCode) {
-      //debug('click ' + keyCode);
+      debug('click ' + keyCode);
       // push keyCode to working queue
       qPush(keyCode);
       qNext();
@@ -1147,7 +1147,7 @@
   }
 
   /* copy from jszhuyin */
-  var debugging = false;
+  var debugging = true;
   var debug = function(str) {
     if (!debugging) {
       return;

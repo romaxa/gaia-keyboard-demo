@@ -4,7 +4,7 @@
 'use strict';
 
 (function() {
-var debugging = false;
+var debugging = true;
 var debug = function(str) {
   if (!debugging)
     return;
@@ -675,7 +675,9 @@ IMEngineBase.prototype = {
      * Passes the clicked key to IMEManager for default action.
      * @param {number} keyCode The key code of an integer.
      */
-    sendKey: function(keyCode) {},
+    sendKey: function(keyCode) {
+      dump("click: function engine_click 3\n");
+    },
 
     /**
      * Sends the input string to the IMEManager.
@@ -708,6 +710,7 @@ IMEngineBase.prototype = {
    * @param {number} keyCode The key code of an integer number.
    */
   click: function engineBase_click(keyCode) {
+    dump("click: function engine_click 2\n");
   },
 
   /**
@@ -1139,6 +1142,7 @@ IMEngine.prototype = {
    *Override
    */
   click: function engine_click(keyCode) {
+    dump("click: function engine_click spinyin.js\n");
     IMEngineBase.prototype.click.call(this, keyCode);
 
     switch (keyCode) {

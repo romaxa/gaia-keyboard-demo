@@ -45,6 +45,7 @@ const IMEController = (function() {
 
   var _IMEngines = {};
   function _getCurrentEngine() {
+      dump("baseLtName:" + _baseLayoutName + "\n");
       return _IMEngines[Keyboards[_baseLayoutName].imEngine];
   };
 
@@ -698,6 +699,7 @@ const IMEController = (function() {
 
   // Handle the default behavior for a pressed key
   function _sendNormalKey(keyCode) {
+    dump("function _sendNormalKey(keyCode) {:" + keyCode + "\n");
 
     // Redirects to IME
     if (_requireIME() &&

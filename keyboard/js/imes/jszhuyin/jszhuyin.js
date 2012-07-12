@@ -5,7 +5,7 @@
 
 (function() {
 
-  var debugging = false;
+  var debugging = true;
   var debug = function(str) {
     if (!debugging)
       return;
