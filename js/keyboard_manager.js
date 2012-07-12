@@ -3,7 +3,7 @@
 var KeyboardManager = (function() {
   // XXX TODO: Retrieve it from Settings, allowing 3rd party keyboards
   var host = document.location.host;
-  var KEYBOARD_URL = 'http://' + host + '/gaia/apps/keyboard/index.html';
+  var KEYBOARD_URL = 'http://' + host + '/gaia-keyboard-demo/keyboard/index.html';
 
   var keyboardFrame, keyboardOverlay;
   var init = function kbManager_init() {
